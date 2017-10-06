@@ -54,6 +54,7 @@ void help() {
         -> 'DFGT' (Driving Force GT)\n\
         -> 'G25'  (G25)\n\
         -> 'G27'  (G27)\n\
+        -> 'G29'  (G29)\n\
     -n, --nativemode            Set wheel to native mode (separate axes, full wheel range, clutch pedal, H-shifter)\n\
     -x, --reset                 Reset the wheel. This is basically the same like unplugging & replugging it.\n\
                                 Note:\n\

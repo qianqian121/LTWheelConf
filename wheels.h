@@ -49,6 +49,7 @@ int get_nativemode_cmd_DFP(cmdstruct *c);
 int get_nativemode_cmd_DFGT(cmdstruct *c);
 int get_nativemode_cmd_G25(cmdstruct *c);
 int get_nativemode_cmd_G27(cmdstruct *c);
+int get_nativemode_cmd_G29(cmdstruct *c);
 int get_range_cmd(cmdstruct *c, int range);
 int get_range_cmd2(cmdstruct *c, int range);
 int get_autocenter_cmd(cmdstruct *c, int centerforce, int rampspeed);
@@ -136,6 +137,18 @@ static const wheelstruct wheels[] = {
         900,
         0,
         &get_nativemode_cmd_G27,
+        &get_range_cmd,
+        &get_autocenter_cmd
+    }, 
+    {
+        "G29",
+        "G29",
+        0xc294,
+        0xc24F,
+        40,
+        900,
+        0,
+        &get_nativemode_cmd_G29,
         &get_range_cmd,
         &get_autocenter_cmd
     }
